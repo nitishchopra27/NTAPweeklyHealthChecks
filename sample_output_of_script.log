@@ -1,0 +1,224 @@
+***************************************************************************************************
+Started processing at [02/18/2019 07:50:01].
+***************************************************************************************************
+
+Running script version [1.1].
+
+***************************************************************************************************
+
+Importing Module: DataONTAP
+Module DataONTAP is imported Successfully
+ 
+Connecting to storage cluster snowy
+ 
+Connected to snowy
+ 
+***************************************************************************************************
+Get Last Weekly ASUP status for nodes
+
+NodeName      SeqNum Subject    Status          DateTime              
+--------      ------ -------    ------          --------              
+snowy01   4301 WEEKLY_LOG sent_successful 17/02/2019 12:20:41 AM
+
+
+
+
+NodeName      SeqNum Subject    Status          DateTime              
+--------      ------ -------    ------          --------              
+snowy02   4159 WEEKLY_LOG sent_successful 17/02/2019 12:36:19 AM
+
+
+
+
+NodeName      SeqNum Subject    Status          DateTime              
+--------      ------ -------    ------          --------              
+snowy05   2871 WEEKLY_LOG sent_successful 17/02/2019 12:18:25 AM
+
+
+
+
+NodeName      SeqNum Subject    Status          DateTime              
+--------      ------ -------    ------          --------              
+snowy06   2906 WEEKLY_LOG sent_successful 17/02/2019 12:19:53 AM
+
+
+
+
+NodeName      SeqNum Subject    Status          DateTime              
+--------      ------ -------    ------          --------              
+snowy07   2222 WEEKLY_LOG sent_successful 17/02/2019 12:19:20 AM
+
+
+
+
+NodeName      SeqNum Subject    Status          DateTime              
+--------      ------ -------    ------          --------              
+snowy08   2208 WEEKLY_LOG sent_successful 17/02/2019 12:18:28 AM
+
+
+
+***************************************************************************************************
+Get Cluster nodes Health Status
+
+NodeName      IsNodeHealthy
+--------      -------------
+snowy01          True
+snowy02          True
+snowy05          True
+snowy06          True
+snowy07          True
+snowy08          True
+
+
+
+***************************************************************************************************
+Get Cluster HA Info
+
+
+Node            : snowy01
+NodeState       : connected
+TakeoverEnabled : True
+TakeoverState   : not_in_takeover
+GivebackState   : nothing_to_gb
+
+Node            : snowy02
+NodeState       : connected
+TakeoverEnabled : True
+TakeoverState   : not_in_takeover
+GivebackState   : nothing_to_gb
+
+Node            : snowy05
+NodeState       : connected
+TakeoverEnabled : True
+TakeoverState   : not_in_takeover
+GivebackState   : nothing_to_gb
+
+Node            : snowy06
+NodeState       : connected
+TakeoverEnabled : True
+TakeoverState   : not_in_takeover
+GivebackState   : nothing_to_gb
+
+Node            : snowy07
+NodeState       : connected
+TakeoverEnabled : True
+TakeoverState   : not_in_takeover
+GivebackState   : nothing_to_gb
+
+Node            : snowy08
+NodeState       : connected
+TakeoverEnabled : True
+TakeoverState   : not_in_takeover
+GivebackState   : nothing_to_gb
+
+
+
+
+***************************************************************************************************
+Get Uptime of Nodes
+ 
+snowy01, Node Uptime: 77 days, 21 hours, 55 minutes
+
+snowy02, Node Uptime: 77 days, 22 hours, 19 minutes
+
+snowy05, Node Uptime: 77 days, 21 hours, 00 minutes
+
+snowy06, Node Uptime: 77 days, 21 hours, 28 minutes
+
+snowy07, Node Uptime: 77 days, 19 hours, 59 minutes
+
+snowy08, Node Uptime: 77 days, 20 hours, 31 minutes
+
+***************************************************************************************************
+Get list of offline Aggregates
+ 
+*** ALL AGGREGATES ARE ONLINE ***
+***************************************************************************************************
+Get EMS LOGS for past 2 hour
+ 
+*** NO CRITICAL ALERTS found in EMS LOGS ***
+***************************************************************************************************
+Check for Broken Disks
+ 
+
+Name                      Shelf Bay Position     Capacity  RPM  FW    Model    
+----                      ----- --- --------     --------  ---  --    -----    
+3.19.6                     19    6  present          1 TB  10k  NA02  X425_H...
+
+
+
+***************************************************************************************************
+Check Snapmirror DP Relations where Lag Time is more than 30 minutes
+ 
+
+SourceLocation                   DestinationLocation                     Lag Ti
+                                                                         meMinu
+                                                                            tes
+--------------                   -------------------                     ------
+thunderSVM053:thunderSVM053_vol003 thunderSVM053DR:thunderSVM053DR_vol003_dr  35.22
+thunderSVM055:thunderSVM055_vol001 thunderSVM055DR:thunderSVM055DR_vol001_dr  35.27
+thunderSVM060:thunderSVM060_vol001 thunderSVM060DR:thunderSVM060DR_vol001_dr  30.27
+thunderSVM060:thunderSVM060_vol006 thunderSVM060DR:thunderSVM060DR_vol006_dr  30.27
+thunderSVM062:thunderSVM062_vol001 thunderSVM062DR:thunderSVM062DR_vol001_dr  30.27
+thunderSVM062:thunderSVM062_vol002 thunderSVM062DR:thunderSVM062_vol002_dr    30.25
+thunderSVM062:thunderSVM062_vol003 thunderSVM062DR:thunderSVM062DR_vol003_dr  30.27
+
+
+
+***************************************************************************************************
+Check Volumes with Used Capacity more than 95%
+ 
+*** All Volumes under 95% Used Capacity ***
+***************************************************************************************************
+Check Volumes with inodes used more than 75%
+ 
+
+VolumeName                         %InodesUsed
+----------                         -----------
+thunderSVM057DR_SP13BS1_dr                   85
+snowySVM066_vol001_sv                      81
+snowySVM066_vol001                         81
+thunderSVM055DR_vol001_dr                    80
+snowySVM065_vol007                         77
+snowySVM077_vol002                         77
+thunderSVM056DR_SOVP_dr                      77
+snowySVM053_vol002                         77
+thunderSVM060DR_vol006_dr                    76
+
+
+
+***************************************************************************************************
+Check Volumes with Max AutoSize Used more than 80%
+ 
+
+Vserver        Name                     Type MaxAutoSizeUsed(%)
+-------        ----                     ---- ------------------
+thunderSVM060DR thunderSVM060DR_vol001_dr dp                80.38
+thunderSVM060DR thunderSVM060DR_vol002_dr dp                81.33
+thunderSVM060DR thunderSVM060DR_vol003_dr dp                80.36
+thunderSVM062DR thunderSVM062DR_vol001_dr dp                83.68
+snowySVM050   snowySVM050_vol001      rw                83.10
+snowySVM066   snowySVM066_vol001      rw                88.65
+snowySVM066   snowySVM066_vol008      rw                80.65
+snowySVM067   snowySVM067_vol002      rw                79.73
+snowySVM077   snowySVM077_vol001      rw                80.33
+snowySVM089   snowySVM089_vol004      rw                83.42
+snowySVM089   snowySVM089_vol007      rw                82.41
+
+
+
+***************************************************************************************************
+Check NOT HOME Interfaces
+ 
+
+InterfaceName       OpStatus Vserver       Address    
+-------------       -------- -------       -------    
+snowy05_mgmt1 up       snowy 192.168.91.70
+
+
+
+***************************************************************************************************
+Check Unhealthy Interface Groups
+ 
+*** All INTERFACE GROUPS are HEALTHY ***
+***************************************************************************************************
